@@ -22,87 +22,111 @@ This setup can be adapted for laboratory experiments, automated testing, or rese
 
 ## 2. Repository Structure
 
+```
 networked-instruments-python-labs/
-│
 ├── src/
-│ └── instruments.py # Main Python script for control and data acquisition
-│
+│   └── instruments.py        # Main Python script
 └── media/
-└── demo.mp4 # Optional demonstration video
+    └── demo.mp4              # Optional demonstration video
+```
+
+---
 
 ## 3. Requirements and Dependencies
 
 The code is compatible with **Python 3.x** and requires the following packages:
 
+```
 python-vxi11
 numpy
 matplotlib
 si-prefix
+```
 
 To install all dependencies:
 
 ```bash
 pip install -r requirements.txt
-If a requirements.txt file is not yet present, the packages above can be installed individually.
+```
+
+If a `requirements.txt` file is not yet present, the packages above can be installed individually.
+
+---
 
 ## 4. Configuration
 
 Update the IP addresses of your instruments in the script before execution:
 
+```python
 g = vxi11.Instrument('172.17.51.102')  # Signal generator
 o = vxi11.Instrument('172.17.51.103')  # Oscilloscope
+```
 
-Ensure both devices are reachable from the host computer and support the VXI-11 protocol.
-It is recommended to verify communication using the *IDN? SCPI command prior to running automated measurements.
+Ensure both devices are reachable from the host computer and support the VXI-11 protocol.  
+It is recommended to verify communication using the `*IDN?` SCPI command prior to running automated measurements.
+
+---
 
 ## 5. Usage
 
-Clone this repository:
+1. Clone this repository:
 
+```bash
 git clone https://github.com/YOUR_USERNAME/networked-instruments-python-labs.git
 cd networked-instruments-python-labs
+```
 
+2. (Optional) Create and activate a virtual environment:
 
-(Optional) Create and activate a virtual environment:
-
+```bash
 python -m venv venv
 source venv/bin/activate        # macOS/Linux
 venv\Scripts\activate           # Windows
+```
 
+3. Install required packages:
 
-Install required packages:
-
+```bash
 pip install -r requirements.txt
+```
 
+4. Run the main script:
 
-Run the main script:
-
+```bash
 python src/instruments.py
-
+```
 
 The script will connect to the instruments, acquire waveform data, and save the generated plot in PDF format.
+
+---
 
 ## 6. Demonstration Video
 
 A short demonstration of the measurement and plotting process is available in the repository:
 
-View demonstration video
+[View demonstration video](media/demo.mp4)
+
+---
 
 ## 7. Output
 
 Each measurement produces a waveform plot saved as a timestamped PDF file, for example:
 
+```
 waveform-oscilloscope-20251020-153245.pdf
-
+```
 
 The plot includes both oscilloscope channels with voltage and time scaling extracted directly from instrument parameters.
+
+---
 
 ## 8. Acknowledgements
 
 This project was developed for instructional use in laboratory exercises on remote instrument control and automated data acquisition using Python.
 
+---
+
 ## 9. License
 
-Specify the license under which this code may be used or modified.
-If uncertain, the MIT License
- is a common permissive option.
+Specify the license under which this code may be used or modified.  
+If uncertain, the [MIT License](https://opensource.org/licenses/MIT) is a common permissive option.
