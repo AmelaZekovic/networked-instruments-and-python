@@ -88,8 +88,6 @@ A short demonstration of the measurement and plotting process is available in th
 
 View demonstration video
 
-If the file is too large for direct hosting, an external link (e.g., YouTube or institutional server) may be used instead.
-
 7. Output
 
 Each measurement produces a waveform plot saved as a timestamped PDF file, for example:
