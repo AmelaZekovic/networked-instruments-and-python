@@ -106,6 +106,7 @@ A short demonstration of the measurement and plotting process is available in th
 
 [View demonstration video](video-demonstrations-in-laboratory/instrument_control_demo.mp4)
 
+
 ---
 
 ## 7. Output
