@@ -23,7 +23,7 @@ This setup can be adapted for laboratory experiments, automated testing, or rese
 ## 2. Repository Structure
 
 ```
-networked-instruments-python-labs/
+networked-instruments-and-python/
 ├── src/
 │   └── instruments.py        # Main Python script
 └── media/
