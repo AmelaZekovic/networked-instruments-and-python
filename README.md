@@ -24,10 +24,28 @@ This setup can be adapted for laboratory experiments, automated testing, or rese
 
 ```
 networked-instruments-and-python/
-├── src/
-│   └── instruments.py        # Main Python script
-└── media/
-    └── demo.mp4              # Optional demonstration video
+## 2. Repository Structure
+
+
+---
+networked-instruments-and-python/
+├── automated-electronics-characterization/
+│ ├── media/ # Images, plots, or related files
+│ ├── output/ # Measurement results or processed data
+│ └── code.py # Script for automated electronics characterization
+│
+├── instrument-control-and-acquisition/
+│ ├── media/ # Supporting media (images or figures)
+│ ├── output/ # Generated waveform or log data
+│ └── code.py # Python script for instrument control and data acquisition
+│
+├── video-demonstrations-in-laboratory/
+│ ├── instrument_control_demo.mp4 # Demonstration of instrument control process
+│ ├── info.txt # Supplementary information about demonstrations
+│ └── README.md # Documentation for video demonstrations
+│
+└── README.md # Main project documentation
+
 ```
 
 ---
