@@ -104,7 +104,7 @@ The script will connect to the instruments, acquire waveform data, and save the 
 
 A short demonstration of the measurement and plotting process is available in the repository:
 
-[View demonstration video](media/waveform-oscilloscope-20251010-143906.pdf)
+[View demonstration video](video-demonstrations-in-laboratory/instrument_control_demo.mp4)
 
 ---
 
