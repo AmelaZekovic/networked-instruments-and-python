@@ -1,4 +1,4 @@
-# Networked Instruments Python Labs
+# Networked Measurement Instruments and Python
 
 This repository contains a Python script that demonstrates remote control and data acquisition from networked laboratory instruments using the **VXI-11 protocol**.  
 It enables communication with a signal generator and an oscilloscope over Ethernet, automated waveform retrieval, and graphical analysis.
@@ -7,7 +7,7 @@ It enables communication with a signal generator and an oscilloscope over Ethern
 
 ## 1. Overview
 
-The project illustrates a typical laboratory automation workflow where instruments are accessed and controlled remotely via TCP/IP.  
+The project illustrates a laboratory automation workflow where instruments are accessed and controlled remotely via TCP/IP.  
 The script provides the following functionality:
 
 - Establishes communication with VXI-11–compatible instruments.
@@ -122,7 +122,7 @@ The plot includes both oscilloscope channels with voltage and time scaling extra
 
 ## 8. Acknowledgements
 
-This project was developed for instructional use in laboratory exercises on remote instrument control and automated data acquisition using Python.
+This project was developed for Electronics education and remote instrument control and automated data acquisition using Python.
 
 ---
 
