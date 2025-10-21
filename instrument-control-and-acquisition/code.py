@@ -67,10 +67,11 @@ def psgraph():
     plt.ylabel('CH1 ' + str(si_format(float(o.ask('channel1:scale?'))))+' V/div' +', CH2 '+ str(si_format(float(o.ask('channel2:scale?'))))+' V/div')
     plt.legend()
     plt.grid()
-    print ('f=',float(g.ask(":sour1:freq?")), 'Hz')
     timestr = time.strftime("%Y%m%d-%H%M%S")
     plt.savefig('D:\Vezzbe\ANE\Vezba 01\waveform-oscilloscope-' + timestr + '.pdf', bbox_inches = 'tight')
-    plt.show()
+    plt.show(block = False)
+    plt.pause(3)
+    plt.close()
     
 
 
@@ -79,7 +80,7 @@ def psgraph():
 ##########################################################################################
 
 ##########################################################################################
-# sin
+# Example 1 sin
 ##########################################################################################
 
 g.write(":outp1 off")
@@ -87,15 +88,61 @@ time.sleep(1)
 g.write(":sour1:func sin")
 g.write(":sour1:volt:high 3")
 g.write(":sour1:volt:low -1")
-g.write(":sour1:freq 1e3")
+g.write(":sour1:freq 10e3")
 time.sleep(1)
 g.write(":outp1 on")
-
-print('For this signal parametars are:')
-print ('Vpp=',float(g.ask(":sour1:volt:ampl?")),'V')
-print ('Vamp=',float(g.ask(":sour1:volt:ampl?"))/2,'V')
-print ('Voffset=',float(g.ask(":sour1:volt:offs?")),'V')
-print ('f=',float(g.ask(":sour1:freq?")), 'Hz')
-
+rrsg()
 psgraph()
-time.sleep(3)
+time.sleep(2)
+
+##########################################################################################
+# Example 2 square
+##########################################################################################
+
+
+g.write(":outp1 off")
+time.sleep(1)
+g.write(":sour1:func squ")
+g.write(":sour1:volt:high 2")
+g.write(":sour1:volt:low -3")
+g.write(":sour1:freq 10e3")
+g.write(":sour1:func:squ:dcyc 50")
+time.sleep(1)
+g.write(":outp1 on")
+rrsg()
+psgraph()
+time.sleep(2)
+
+##########################################################################################
+# Example 3 ramp
+##########################################################################################
+
+g.write(":outp1 off")
+time.sleep(1)
+g.write(":sour1:func ramp")
+g.write(":sour1:volt:high 3")
+g.write(":sour1:volt:low -3")
+g.write(":sour1:freq 5e3")
+g.write(":sour1:func:ramp:symm 100")
+time.sleep(1)
+g.write(":outp1 on")
+rrsg()
+psgraph()
+time.sleep(2)
+
+##########################################################################################
+# Example 4 triangle
+##########################################################################################
+
+g.write(":outp1 off")
+time.sleep(1)
+g.write(":sour1:func ramp")
+g.write(":sour1:volt:high 2")
+g.write(":sour1:volt:low -2")
+g.write(":sour1:freq 5e3")
+g.write(":sour1:func:ramp:symm 50")
+time.sleep(1)
+g.write(":outp1 on")
+rrsg()
+psgraph()
+time.sleep(2)
