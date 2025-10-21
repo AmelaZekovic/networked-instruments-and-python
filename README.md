@@ -128,5 +128,7 @@ This project was developed for Electronics education and remote instrument contr
 
 ## 9. License
 
-Specify the license under which this code may be used or modified.  
-If uncertain, the [MIT License](https://opensource.org/licenses/MIT) is a common permissive option.
+This project uses a dual-license model:
+
+- **Source code** is licensed under the [MIT License](LICENSE).
+- **Documentation, images, and other non-code content** are licensed under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
